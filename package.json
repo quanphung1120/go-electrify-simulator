@@ -1,0 +1,16 @@
+{
+  "name": "go-electrify-simulator",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "pnpm -r --parallel run dev",
+    "build": "pnpm -w -r run build",
+    "start": "pnpm -w -r run start"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  }
+}
