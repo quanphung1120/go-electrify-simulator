@@ -2,7 +2,7 @@ import http from "http";
 import { Server } from "socket.io";
 import { EventType } from "@go-electrify/shared";
 
-const PORT = process.env.PORT ? Number(process.env.PORT) : 3001;
+const PORT = process.env.PORT ? Number(process.env.PORT) : 6868;
 
 const httpServer = http.createServer();
 const io = new Server(httpServer, {

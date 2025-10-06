@@ -6,11 +6,17 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "pnpm -r --parallel run dev",
+    "dev": "concurrently -n client,server -c cyan,yellow \"pnpm --filter @go-electrify/client dev\" \"pnpm --filter @go-electrify/server dev\"",
+    "dev:parallel": "pnpm -r --parallel run dev",
     "build": "pnpm -r run build",
-    "start": "pnpm -w -r run start"
+    "build:shared": "pnpm --filter @go-electrify/shared build",
+    "start": "pnpm -r run start",
+    "clean": "pnpm -r run clean && rm -rf node_modules",
+    "lint": "pnpm -r run lint",
+    "typecheck": "pnpm -r run typecheck"
   },
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "typescript": "^5"
   }
 }
