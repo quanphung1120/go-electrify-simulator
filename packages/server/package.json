@@ -9,6 +9,7 @@
     "start": "node dist/index.js"
   },
   "dependencies": {
+    "@go-electrify/shared": "workspace:*",
     "socket.io": "^4"
   },
   "devDependencies": {
